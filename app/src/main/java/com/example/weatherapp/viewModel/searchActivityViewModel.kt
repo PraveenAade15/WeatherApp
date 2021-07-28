@@ -15,5 +15,8 @@ class searchActivityViewModel(application: Application): AndroidViewModel(applic
     fun changeState(){
         repository.changeState()
     }
-
+    fun SearchLocation(searchString: String)
+    {
+repository.SearchLocation(searchString)
+    }
 }

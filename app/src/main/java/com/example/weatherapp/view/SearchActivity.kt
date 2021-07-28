@@ -3,6 +3,7 @@ package com.example.weatherapp.view
 import android.os.Bundle
 import android.view.View.GONE
 import android.view.View.VISIBLE
+import android.widget.EditText
 import android.widget.ImageView
 import android.widget.ProgressBar
 import androidx.appcompat.app.AppCompatActivity
@@ -23,8 +24,10 @@ class SearchActivity : AppCompatActivity() {
 
         val searchImage: ImageView = findViewById(R.id.iv_set)
         val searchProgressbar:ProgressBar=findViewById(R.id.search_progress)
+        val searchEdit:EditText=findViewById(R.id.et_search)
         searchImage.setOnClickListener {
-            viewModel.changeState()
+            //if (searchEdit.text!!.isNotEmpty)
+            viewModel.SearchLocation(searchEdit.text.toString())
 
         }
         viewModel.showProgress.observe(this, Observer {

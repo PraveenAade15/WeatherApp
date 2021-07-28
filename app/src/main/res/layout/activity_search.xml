@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:background="@color/design_default_color_primary_dark"
         android:layout_height="wrap_content">
-        <androidx.appcompat.widget.AppCompatEditText
+        <EditText
             android:id="@+id/et_search"
             android:layout_toStartOf="@+id/iv_set"
             android:layout_toLeftOf="@+id/iv_set"
